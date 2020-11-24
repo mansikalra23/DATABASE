@@ -72,7 +72,7 @@ where dob is null; -- to get null values
 
 select *
 from employee
-limit 2; 
+limit 2;
 -- returns only given limit of rows.
 -- limit 2, 3; will skip first 2 record and give the nest three records.
 
@@ -95,10 +95,11 @@ left join department d -- it will give every records of employee table whether t
 	on e.depid=d.depid;
 -- right join will give all the records of department table.
 
--- NATURAL JOIN
+-- FULL JOIN
 select ecode, fname, dname
 from employee e
-natural join department d;
+FULL join department d
+ON e.depid = d.depid;
 
 -- CROSS JOIN ; every record in one table will combine with every record in another table
 select ecode, fname, dname
